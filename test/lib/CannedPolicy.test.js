@@ -60,8 +60,7 @@ describe('CannedPolicy', function() {
       // Parse the stringified result so we can examine it's properties.
       parsedResult = JSON.parse(result);
 
-      expect(parsedResult).to.have.deep.property(
-        'Statement[0].Condition.IpAddress.AWS:SourceIp', "1.2.3.0/24");
+      expect(parsedResult.Statement[0].Condition.IpAddress['AWS:SourceIp']).to.equal('1.2.3.0/24');
 
       done();
     });
@@ -91,10 +90,10 @@ describe('CannedPolicy', function() {
       // Parse the stringified result so we can examine it's properties.
       parsedResult = JSON.parse(result);
 
-      expect(parsedResult).to.have.deep.property(
-        'Statement[0].Resource', 'http://t.com');
-      expect(parsedResult).to.have.deep.property(
-        'Statement[0].Condition.DateLessThan.AWS:EpochTime', expireTimeSecs);
+      expect(parsedResult.Statement[0].Resource).to.equal('http://t.com');
+
+
+      expect(parsedResult.Statement[0].Condition.DateLessThan['AWS:EpochTime']).to.equal(expireTimeSecs);
 
       done();
     });

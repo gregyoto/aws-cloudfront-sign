@@ -10,7 +10,7 @@
   ],
   "main": "./lib/cloudfrontUtil.js",
   "scripts": {
-    "test": "./node_modules/.bin/mocha"
+    "test": "mocha ./test/**/*.test.js"
   },
   "repository": {
     "type": "git",
