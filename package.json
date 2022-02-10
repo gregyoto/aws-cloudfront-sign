@@ -14,7 +14,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/jasonsims/aws-cloudfront-sign.git"
+    "url": "https://github.com/gregyoto/aws-cloudfront-sign.git"
   },
   "keywords": [
     "aws",
@@ -23,7 +23,7 @@
   ],
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/jasonsims/aws-cloudfront-sign/issues"
+    "url": "https://github.com/gregyoto/aws-cloudfront-sign/issues"
   },
   "dependencies": {
     "lodash": "^4.17.19"
